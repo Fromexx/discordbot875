@@ -2,6 +2,4 @@ discord.py
 aiohttp
 websockets
 chardet
-discord.ext
-discord_webhook
-discord.utils
+discord-webhook
