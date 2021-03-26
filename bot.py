@@ -121,3 +121,5 @@ class MyClient(discord.Client):
 
 # bot launch
 token = os.environ.get('BOT_TOKEN')
+
+bot.run(str(token))
