@@ -22,7 +22,7 @@ class MyClient(discord.Client):
 
     @Bot.event
     @client.event
-    async def on_message(message):
+    async def on_message(self, message):
 
         # displays server rules
         if message.content == '!правила':
