@@ -1,11 +1,13 @@
 # imports
 import discord
+import os
+
 from discord.ext import commands
 # this library allows you to make a frame to the left of the message
 # for color you can use HEX colors with the addition of a prefix "0x"
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from discord.utils import get
-import os
+
 
 Bot = commands.Bot(command_prefix = "!")
 client = discord.Client()
@@ -15,10 +17,12 @@ noob = 'Начинающий'
 geymer = 'Геймер'
 
 class MyClient(discord.Client):
+
     # displays the message "Bot connection!" when the bot is online
     async def on_ready(self):
         # bot connection
         print('Bot connection!')
+
 
     @Bot.event
     @client.event
@@ -117,6 +121,9 @@ class MyClient(discord.Client):
             else:
                 embed = discord.Embed(title="У вас нету данной роли!", color=0x0000FF)
                 await message.channel.send(embed=embed)
+                
+        if 'ам' in message.content:
+            await message.reply('ogus', mention_author=True)
 
 
 # bot launch
