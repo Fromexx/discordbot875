@@ -1,4 +1,5 @@
 # imports
+import os
 import discord
 from discord import Member
 from discord.ext import commands
